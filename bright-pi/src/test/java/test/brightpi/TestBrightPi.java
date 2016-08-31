@@ -44,11 +44,11 @@ public class TestBrightPi
 				device = i2c.getDevice(BRIGHTPI_ADDRESS);
 			} catch (UnsupportedBusNumberException e)
 			{
-				// TODO Auto-generated catch block
+				// TODO Exception handling
 				e.printStackTrace();
 			} catch (IOException e)
 			{
-				// TODO Auto-generated catch block
+				// TODO Exception handling
 				e.printStackTrace();
 			}
 
@@ -91,7 +91,6 @@ public class TestBrightPi
 			{
 				for (final BrightPiMode mode : BrightPiMode.values())
 				{
-					//TODO something wrong top left and bottom right dimly lit when should be off after setting mode.
 					bp.on();
 					bp.setMode(mode);
 					bp.setLEDBrightness(brightness);
